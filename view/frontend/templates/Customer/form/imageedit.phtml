@@ -1,0 +1,14 @@
+<fieldset class="fieldset create account" data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>">
+    <legend class="legend">
+        <span><?php /* @escapeNotVerified */echo __('Image Uploaded') ?></span>
+    </legend>
+    <p> Image Not Found</p>
+    <p> <?php echo $block->getFileUrl(); ?></p>
+    <?php if ($url = $block->getFileUrl()): ?>
+    <div class="field">
+        <p> <?php echo $block->getFileUrl(); ?></p>
+        <p> file Upload </p>
+        <img src="<?php echo $url; ?>" alt="image" />
+    </div>
+    <?php endif;?>
+</fieldset>
